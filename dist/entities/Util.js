@@ -82,7 +82,7 @@ var Util = exports.Util = /** @class */ (function () {
                     case 0: return [4 /*yield*/, this.tracks.getV2(songUrl)];
                     case 1:
                         track = _c.sent();
-                        match = (_b = track.media.transcodings.find(function (t) { return t.format.mime_type === "audio/mpeg" && t.format.protocol === "progressive"; })) === null || _b === void 0 ? void 0 : _b.url;
+                        match = (_b = track.media.transcodings.find(function (t) { return t.format.mime_type === "audio/mpeg" && (t.format.protocol === "progressive" || t.format.protocol === "hls"); })) === null || _b === void 0 ? void 0 : _b.url;
                         return [4 /*yield*/, this.api.getClientID()];
                     case 2:
                         client_id = _c.sent();
